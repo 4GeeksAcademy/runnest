@@ -25,7 +25,7 @@ const SignUp = () => {
     const createUser = async () => {
         try {
             console.log('Antes de la solicitud POST');
-            const resp = await fetch("https://github.com/public-apis/public-apis/api/user", {
+            const resp = await fetch("https://shiny-giggle-jpxgqjg5xjvh5p4x-3000.app.github.dev/api/user", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
