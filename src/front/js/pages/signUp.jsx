@@ -9,7 +9,7 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import Swal from "sweetalert2";
 
 
-const SignUp = () => {
+export const SignUp = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const { store, actions } = useContext(Context);
@@ -59,13 +59,11 @@ const SignUp = () => {
                     initialValues={{
                         email: "",
                         password: "",
-                        username: "",
                         firstname: "",
                         lastname: "",
                         phone_prefix: "",
                         phone_number: "",
                         address: "",
-                        payment_method: "",
                         acceptTerms: false,
                     }}
                     validationSchema={Yup.object().shape({
@@ -223,11 +221,7 @@ const SignUp = () => {
                                     </div>
 
 
-                                    <div className=" custom-input-password">
-                                        <label htmlFor="username" className={formik.values.username ? 'input-label has-value' : 'input-label'}>Nombre de usuario</label>
-                                        <Field name="username" type="text" className="form-control" />
-                                        <ErrorMessage name="username" />
-                                    </div>
+                                
 
                                     <div className=" custom-input-password">
                                         <label htmlFor="firstname" className={formik.values.firstname ? 'input-label has-value' : 'input-label'}>Nombre</label>
@@ -268,18 +262,7 @@ const SignUp = () => {
                                     </div>
 
 
-                                    <div className=" custom-input-password" id="payment-radio" role="group" aria-labelledby="payment-radio">
-                                        <label htmlFor="payment_method" className="form-label">Método de pago</label>
-                                        <div>
-                                            <label>
-                                                <Field type="radio" name="payment_method" value="Paypal" className="form-check-input" />
-                                                Paypal
-                                            </label>
-                                            <label>
-                                                <Field type="radio" name="payment_method" value="GooglePay" className="form-check-input ms-4" />
-                                                Google Pay
-                                            </label>
-                                        </div>
+                                
                                         <ErrorMessage name="payment_method" component="div" className="error-message" />
                                     </div>
                                     <div className="d-flex">

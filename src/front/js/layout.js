@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 import { BackendURL } from "./component/backendURL";
+import { SignUp } from "./component/signUp.jsx"
+import { LogIn } from "./component/logIn.jsx"
 
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
@@ -28,6 +30,8 @@ const Layout = () => {
                         <Route element={<Home />} path="/" />
                         <Route element={<Demo />} path="/demo" />
                         <Route element={<Single />} path="/single/:theid" />
+                        <Route element={<SignUp  />} path="/signUp" />
+                        <Route element={<LogIn  />} path="/logIn" />
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>
                     <Footer />
