@@ -6,7 +6,7 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import Swal from "sweetalert2";
 
-const LogIn = () => {
+export const LogIn = () => {
   const { store, actions } = useContext(Context);
   const [loginError, setLoginError] = useState("");
   let navigate = useNavigate();
